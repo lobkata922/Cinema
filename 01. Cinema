@@ -1,0 +1,22 @@
+type_project = input()
+rows = int(input())
+cols = int(input())
+
+all_seats = rows * cols
+price = 0
+is_valid_data = True
+if type_project == "Premiere":
+    price = 12
+elif type_project == "Normal":
+    price = 7.50
+elif type_project == "Discount":
+    price = 5
+else:
+    is_valid_data = False
+
+if is_valid_data:
+    total_income = all_seats * price
+    print(f"{total_income:.2f} leva")
+
+else:
+    print("error")
